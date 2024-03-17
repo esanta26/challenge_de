@@ -21,7 +21,7 @@ def load_data(file_path):
   return data
 
 @profile
-def q3_memory(file_path: str) -> List[Tuple[str, int]]:
+def q3_memory(file_path: str):
   data = load_data(file_path)
   referenced_users = list(filter(lambda x: x is not None, data))
   referenced_users = [user.get("username") for row in referenced_users for user in row]
