@@ -21,7 +21,7 @@ def load_data(file_path):
 
 @profile
 def q1_memory(file_path: str):
-  data = load_data()
+  data = load_data(file_path)
   df = pd.DataFrame(data)
   df['date'] = pd.to_datetime(df['date']).dt.date
   df['user'] = df['user'].astype("string")
